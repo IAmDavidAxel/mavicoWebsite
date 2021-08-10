@@ -23,7 +23,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-note@master
+      - uses: actions/setup-node@master
         with:
           node-version: '14.15'
       - run: npm install
