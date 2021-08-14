@@ -1,1 +1,70 @@
-<h1>Yeah buddy</h1>
+<header class="l-header">
+  <nav class="nav bd-grid">
+    <a href="#" class="nav__logo">Mavico</a>
+
+
+  <div class="nav__menu" id="nav-menu">
+
+    <ul class="nav__list">
+      <li class="nav__item"> <a href=""> Accueil </a></li>
+      <li class="nav__item"> <a href="#about"> A Propos </a></li>
+      <li class="nav__item"> <a href="#services"> Nos Services </a></li>
+      <li class="nav__item"> <a routerLink="command"> Commander </a> </li>
+    </ul>
+  </div>
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class='bx bx-menu'></i>
+    </div>
+  </nav>
+</header>
+
+<main class="l-main">
+
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <p class="footer__title">Mavico</p>
+  <div class="footer__title"></div>
+
+  <div class="footer__social">
+    <a href="" class="footer__icon"><i class="bx bxl-facebook"></i> </a>
+    <a href="" class="footer__icon"><i class="bx bxl-twitter"></i> </a>
+    <a href="" class="footer__icon"><i class="bx bxl-instagram"></i> </a>
+  </div>
+
+</footer>
+
+<script type="text/javascript">
+
+  /*===== MENU SHOW Y HIDDEN =====*/
+  const navMenu = document.getElementById('nav-menu'),
+    toggleMenu = document.getElementById('nav-toggle'),
+    closeMenu = document.getElementById('nav-close')
+
+  // SHOW
+  toggleMenu.addEventListener('click', ()=>{
+    navMenu.classList.toggle('show')
+  })
+
+  // HIDDEN
+  closeMenu.addEventListener('click', ()=>{
+    navMenu.classList.remove('show')
+  })
+
+  /*===== MOUSEMOVE HOME IMG =====*/
+  document.addEventListener('mousemove', move);
+  function move(e){
+    this.querySelectorAll('.move').forEach(layer =>{
+      const speed = layer.getAttribute('data-speed')
+
+      const x = (window.innerWidth - e.pageX*speed)/120
+      const y = (window.innerHeight - e.pageY*speed)/120
+
+      layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+  }
+
+
+</script>

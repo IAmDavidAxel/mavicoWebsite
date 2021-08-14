@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { gsap} from 'gsap'
+import {NgsRevealConfig} from "ngx-scrollreveal";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mavicoWebsite';
+
+
 }
