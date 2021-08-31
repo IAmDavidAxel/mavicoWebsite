@@ -1,70 +1,213 @@
-<header class="l-header">
-  <nav class="nav bd-grid">
-    <a href="#" class="nav__logo">Mavico</a>
-
-
-  <div class="nav__menu" id="nav-menu">
-
-    <ul class="nav__list">
-      <li class="nav__item"> <a href=""> Accueil </a></li>
-      <li class="nav__item"> <a href="#about"> A Propos </a></li>
-      <li class="nav__item"> <a href="#services"> Nos Services </a></li>
-      <li class="nav__item"> <a routerLink="command"> Commander </a> </li>
-    </ul>
-  </div>
-
-    <div class="nav__toggle" id="nav-toggle">
-      <i class='bx bx-menu'></i>
+<nav class="navbar navbar-expand-lg sticky-lg-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mavico</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#about">A propos de nous</a>
+        <a class="nav-link" href="#services">Nos services</a>
+        <a class="nav-link " href="#work" tabindex="-1">Notre travail</a>
+        <a class="nav-link" href="#command">Commander</a>
+        <a class="nav-link" href="#contact">Nous contacter</a>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+
+<header class="container">
+  <!-- The video -->
+  <video autoplay [muted]="true" loop id="myVideo">
+    <source src="/assets/vid/construction%20site%20time%20lapse%20shopping%20mall%20_%20Minto%20Mönchengladbach%20-%20MFI.mp4" type="video/mp4">
+  </video>
+
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum...</p>
+  </div>
 </header>
 
-<main class="l-main">
-
-  <router-outlet></router-outlet>
-</main>
-
-<footer class="footer">
-  <p class="footer__title">Mavico</p>
-  <div class="footer__title"></div>
-
-  <div class="footer__social">
-    <a href="" class="footer__icon"><i class="bx bxl-facebook"></i> </a>
-    <a href="" class="footer__icon"><i class="bx bxl-twitter"></i> </a>
-    <a href="" class="footer__icon"><i class="bx bxl-instagram"></i> </a>
+<section class="scroll-container section about" ngsReveal="">
+  <div class="container" id="about">
+    <div class="row">
+      <div class="col">
+        <img src="/assets/img/about.jpg" alt="about picture"/>
+      </div>
+      <div class="col">
+        <p class="about__text">
+          SN-MAVICO est une société de production industrielle de blocs bétons ou parpaings. Les briques produites sont
+          fortement vibrées et compressées pour une qualité qui défie toute concurrence.
+        </p>
+      </div>
+    </div>
   </div>
 
-</footer>
+</section>
 
-<script type="text/javascript">
+<section class="scroll-container section services"  id="service" ngsReveal="">
+  <h1 class="section-title"> Nos Services</h1>
 
-  /*===== MENU SHOW Y HIDDEN =====*/
-  const navMenu = document.getElementById('nav-menu'),
-    toggleMenu = document.getElementById('nav-toggle'),
-    closeMenu = document.getElementById('nav-close')
+  <div class="container">
+    <div class="row">
 
-  // SHOW
-  toggleMenu.addEventListener('click', ()=>{
-    navMenu.classList.toggle('show')
-  })
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/img/pavé2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title">UNE SOLIDITE POUR LA VIE !</h2>
+            <p class="card-text">Constitués à 94% de gravier, de sable ainsi que de 6% d'eau, les blocs béton SN-MAVICO sont inaltérables
+              incombustibles et inoxydables</p>
+            <p class="card-text">
+              Les blocs béton SN-MAVICO ont même l'élégance de devenir plus solide au fil du temps
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/img/pavé2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title">DES DEPENSES EN MOINS? DU TEMPS EN PLUS</h2>
+            <p class="card-text">L'utilisation des blocs de béton SN-MAVICO permet de réaliser des economies en bois de
+              coffrage et d'étais et en mortier. De plus leur utilisation pratique permet de raccourcir vos délais</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/img/pavé3.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h2 class="card-title">Un CONFORT THERMIQUE ET ACCOUSTIQUE ASSURE</h2>
+            <p class="card-text">Le bloc de béton SN-MAVICO, par son systeme de double rangée d'alvéole, permet une isolation thermique et accoustique
+              et efficace par l'interieur et par l'extérieur</p>
+          </div>
+        </div>
+      </div>
 
-  // HIDDEN
-  closeMenu.addEventListener('click', ()=>{
-    navMenu.classList.remove('show')
-  })
+    </div>
 
-  /*===== MOUSEMOVE HOME IMG =====*/
-  document.addEventListener('mousemove', move);
-  function move(e){
-    this.querySelectorAll('.move').forEach(layer =>{
-      const speed = layer.getAttribute('data-speed')
+  </div>
 
-      const x = (window.innerWidth - e.pageX*speed)/120
-      const y = (window.innerHeight - e.pageY*speed)/120
+</section>
 
-      layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-    })
-  }
+<section class=" scroll-container section work" ngsReveal="">
+  <h1 class="section-title">Notre travail</h1>
+
+  <div id="work" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/pavé.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/pavé2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/img/pavé3.jfif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+</section>
+
+<section class="scroll-container section command" ngsReveal="">
+
+  <div class="container-fluid" id="command">
+    <div class="row">
+      <div class="col">
+
+        <h2 class="section-title"> Commander</h2>
+        <h3>Remplisser le formulaire pour recevoir par email sur une estimation de devis</h3>
+      </div>
 
 
-</script>
+      <div class="col">
+        <form >
+
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+
+          <div class="form-group">
+            <label for="lastName"> Prenom</label>
+            <input type="text" class="form-control" id="lastName">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+
+          <div class="form-group">
+            <label for="representing">Société représenté</label>
+            <input type="text" class="form-control" id="representing">
+          </div>
+
+          <div class="form-group">
+            <label for="surface">Superficie a pavé</label>
+            <input type="text" class="form-control" id="surface">
+          </div>
+
+          <div class="checkbox">
+            <label><input type="checkbox">Je souhaite être contacté par
+              email pour d'éventuel collaboration et/ou offre promotionnelle</label>
+          </div>
+
+          <button type="submit" class="btn btn-outline-primary">Soumettre</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scroll-container section contact" ngsReveal="">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 style="text-align: center">Contact</h1>
+        <h3>Vous pouvez nous contacter au numero suivant</h3>
+        <h3>Tel: +22625373298</h3>
+      </div>
+
+
+      <div class="col">
+        <img src="/assets/img/address.PNG" alt="gps address">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
