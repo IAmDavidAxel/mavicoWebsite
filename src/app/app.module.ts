@@ -38,6 +38,7 @@ import {MatInputModule} from "@angular/material/input";
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule
 
 
   ],

@@ -8,14 +8,15 @@ import {NgbCarousel, NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
 })
 export class OurWorkComponent implements OnInit {
 
-  ngOnInit() { }
-
   constructor(config: NgbCarouselConfig) {
     config.interval =2000;
     config.wrap =true;
     config.keyboard = false;
     config.pauseOnHover = false;
   }
+  ngOnInit() { }
+
+
 
 
 
