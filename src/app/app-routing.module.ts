@@ -7,6 +7,7 @@ import {CommandComponent} from "./command/command.component";
 import {OurServicesComponent} from "./our-services/our-services.component";
 import {AboutComponent} from "./about/about.component";
 
+
 const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'dashboard', component: DashboardComponent},
@@ -14,13 +15,13 @@ const routes: Routes = [
   {path: 'command', component: CommandComponent},
   {path:'services', component: OurServicesComponent},
   {path: 'about', component: AboutComponent}
-
 ]
+
 
 @NgModule({
   declarations: [],
   imports: [
-    [RouterModule.forRoot(routes)],
+    RouterModule.forRoot(routes),
     CommonModule
   ],
   exports: [RouterModule]
