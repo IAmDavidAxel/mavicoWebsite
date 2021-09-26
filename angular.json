@@ -33,7 +33,8 @@
 
             ],
             "scripts": [
-              "./node_modules/scrollreveal/dist/scrollreveal.js"
+              "./node_modules/scrollreveal/dist/scrollreveal.js",
+              "./node_modules/jquery/dist/jquery.min"
             ]
           },
           "configurations": {

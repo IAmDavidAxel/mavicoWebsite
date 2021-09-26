@@ -6,22 +6,18 @@ import {ContactComponent} from "./contact/contact.component";
 import {CommandComponent} from "./command/command.component";
 import {OurServicesComponent} from "./our-services/our-services.component";
 import {AboutComponent} from "./about/about.component";
-
+import {OurWorkComponent} from "./our-work/our-work.component";
 
 const routes: Routes = [
   {path: '', component: DashboardComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'contact', component: ContactComponent },
-  {path: 'command', component: CommandComponent},
-  {path:'services', component: OurServicesComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'home', component: DashboardComponent},
+  {path: 'work', component: OurWorkComponent}
 ]
-
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes),
+    [RouterModule.forRoot(routes)],
     CommonModule
   ],
   exports: [RouterModule]

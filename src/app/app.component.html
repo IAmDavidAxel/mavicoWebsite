@@ -1,37 +1,40 @@
-<div class="container-fluid">
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark justify-content-center">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Mavico</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="dashboard">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="about">A propos de nous</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="command">Command</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">
+           <i class="bi-house"></i>
+            Home</a>
+        <a class="nav-link" href="#about">
+          <i class="bi-people-fill"></i>
+          A propos de nous</a>
+        <a class="nav-link" href="#services">
+          <i class="bi-hand-thumbs-up-fill"></i>
+          Nos services</a>
+
+        <a class="nav-link" href="#product">
+          <i class="bi-cart"></i>
+          Nos Produits
+        </a>
+
+        <a class="nav-link " routerLink="work" tabindex="-1">
+          <i class="bi-bricks"></i>
+          Notre travail</a>
+        <a class="nav-link" href="#command">
+          <i class="bi-shop"></i>
+          Commander</a>
+        <a class="nav-link" href="#contact">
+          <i class="bi-whatsapp"></i>
+          Nous contacter</a>
+      </div>
     </div>
   </div>
 </nav>
 
-  <router-outlet></router-outlet>
 
+<router-outlet></router-outlet>
 
-</div>
