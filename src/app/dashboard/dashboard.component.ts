@@ -15,6 +15,22 @@ export class DashboardComponent implements OnInit {
     config.reset = true;
   }
 
+
   ngOnInit(): void {
+
+    var sections = document.querySelectorAll('section');
+    var container = document.querySelector('.scroll_container');
+
+    // @ts-ignore
+    container.addEventListener('scroll',function () {
+      sections.forEach((e,i) => {
+        var top = (e.getBoundingClientRect().top);
+        if (top == 0){
+          e.classList.add('is-inview')
+        }else {
+          e.classList.remove('is-inview')
+        }
+      });
+    })
   }
 }
