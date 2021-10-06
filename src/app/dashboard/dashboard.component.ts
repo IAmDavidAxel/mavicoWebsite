@@ -11,6 +11,9 @@ import {NgsRevealConfig} from "ngx-scrollreveal";
   providers: [NgsRevealConfig]
 })
 export class DashboardComponent implements OnInit {
+  lat = 12.333401;
+  lng = -1.507977;
+
   constructor(config: NgsRevealConfig) {
     config.duration = 200;
     config.delay = 400;

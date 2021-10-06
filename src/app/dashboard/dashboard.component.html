@@ -47,7 +47,7 @@
         <div class="col">
 
           <h2 class="h2 text-center service__title">UNE SOLIDITE POUR LA VIE</h2>
-          <p class="p-lg-5 text-center service__text">
+          <p class="p-1 text-center service__text">
             Constitués à 94% de gravier, de sable ainsi que de 6% d'eau, les blocs béton SN-MAVICO sont inaltérables
             incombustibles et inoxydables
           </p>
@@ -64,11 +64,12 @@
       <div class="row">
 
         <div class="col service__pic" ngsReveal="">
-          <img class="spending__pic img-fluid" src="assets/img/serv/pyramid_PNG16.png" alt="pic" >
+          <img class="spending__pic img-fluid" src="assets/img/serv/reduce_cost-removebg-preview.png" alt="pic" >
         </div>
 
         <div class="col">
-          <p class="service__text p-lg-5 text-center" ngsReveal="">
+          <h2 class="h2 text-center service__title">DES DEPENSES EN MOINS</h2>
+          <p class="service__text p-1 text-center" ngsReveal="">
             L'utilisation des blocs de béton SN-MAVICO permet de réaliser des economies en bois de
             coffrage et d'étais et en mortier. De plus leur utilisation pratique permet de raccourcir vos délais
           </p>
@@ -85,16 +86,20 @@
 
       <div class="row">
 
-        <div class="col service__pic"  ngsReveal="">
-          <img class="spending__pic img-fluid" src="assets/img/serv/pyramid_PNG16.png" alt="pic" >
-        </div>
 
         <div class="col">
-          <p class="service__text p-lg-5 text-center" ngsReveal="">
+          <h2 class="h2 text-center service__title">UN COMFORT THERMIQUE ET ACOUSTIQUE</h2>
+          <p class="service__text p-1 text-center" ngsReveal="">
             Le bloc de béton SN-MAVICO, par son systeme de double rangée d'alvéole, permet une isolation thermique et accoustique
             et efficace par l'interieur et par l'extérieur
           </p>
         </div>
+
+        <div class="col service__pic"  ngsReveal="">
+          <img class="spending__pic img-fluid" src="assets/img/serv/thermique-removebg-preview.png" alt="pic" >
+        </div>
+
+
 
       </div>
 
@@ -108,29 +113,79 @@
       <h3 class="h3 ">Nos Produits</h3>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 20rem; height: 18rem;">
       <img class="card-img-top" src="/assets/newBrique/DSC_0180-removebg-preview.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Bloc Creux</p>
+        <p class="card-text">BLOC D'ANGLE</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; height: 18rem;">
       <img class="card-img-top" src="/assets/newBrique/DSC_0188-removebg-preview.png" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">BLOC CREUX</p>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card" style="width: 28rem; height: 18rem;">
+      <img class="card-img-top" src="/assets/img/brique/parpaing-plein-5-20-50-nf-removebg-preview.png" height="120px" width="80px" alt="Card image cap">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">BLOC LONGRINE ET CHAINAGE</p>
       </div>
     </div>
+
+    <div class="card" style="width: 18rem; height: 18rem;">
+      <img class="card-img-top" src="/assets/img/brique/BLOC_PLEIN.png" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">BLOC PLEIN</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 18rem;">
+      <img class="card-img-top" src="/assets/img/brique/bloc%20a%20bancher.png" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">BLOC A BANCHE</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; height: 18rem;">
+      <img class="card-img-top" src="/assets/img/brique/poutrelle.png" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">POUTRELLES ET HOURDIS</p>
+      </div>
+    </div>
+
   </section>
 
   <section class="contact" id="contact">
-    <h1>Nous Contacter</h1>
+
+
+    <div class="container">
+
+      <div class="row">
+
+        <h1>Nous Contacter</h1>
+        <div class="col">
+          <p class="p-4 contact__text text-xxl-center">
+            Pour tous vos projets de construction, n'hésitez plus contacter nous !
+          </p>
+
+          <div class="col">
+            <i class="bi-mailbox" style="font-size: 2rem"> mavico@fasonet.bf</i> <br/>
+            <i class="bi-phone-fill"  style="font-size: 2rem"> (+226)25-37-32-98</i> <br/>
+            <i class="bi-phone-fill" style="font-size: 2rem"> (+226)70-21-14-69</i> <br/>
+            <i class="bi-phone-fill" style="font-size: 2rem"> (+226)70-21-21-07</i> <br/>
+          </div>
+        </div>
+
+        <div class="col">
+
+          <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+        </div>
+
+      </div>
+    </div>
   </section>
 </div>
