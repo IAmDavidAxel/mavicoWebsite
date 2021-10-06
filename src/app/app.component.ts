@@ -3,6 +3,9 @@ import { gsap} from 'gsap'
 import {NgsRevealConfig} from "ngx-scrollreveal";
 import * as $ from 'jquery';
 
+import {NgbCarousel, NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,9 +16,18 @@ import * as $ from 'jquery';
 export class AppComponent implements OnInit {
   title = 'mavicoWebsite';
 
-  lol
+  constructor(config: NgbCarouselConfig) {
+    config.interval =20000;
+    config.wrap =true;
+    config.keyboard = false;
+    config.pauseOnHover = false;
+  }
+
+
 
   ngOnInit(): void {
+
+
 
   }
 

@@ -9,10 +9,12 @@ import {NgbCarousel, NgbCarouselConfig} from "@ng-bootstrap/ng-bootstrap";
 export class OurWorkComponent implements OnInit {
 
   constructor(config: NgbCarouselConfig) {
-    config.interval =2000;
+    config.interval =20000;
     config.wrap =true;
-    config.keyboard = false;
+    config.keyboard = true;
     config.pauseOnHover = false;
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators =true;
   }
   ngOnInit() { }
 

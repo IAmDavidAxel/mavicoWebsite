@@ -1,40 +1,52 @@
+<header class="video">
+  <!-- The video -->
+  <video autoplay [muted]="true" loop id="myVideo">
+    <source src="/assets/vid/construction%20site%20time%20lapse%20shopping%20mall%20_%20Minto%20Mönchengladbach%20-%20MFI.mp4" type="video/mp4">
+  </video>
 
-<div class="container">
+  <div class="overlayText">
+    <img src="assets/logo/logo.png" alt="logo Mavico">
+  </div>
+
+
+</header>
+
+<div class="container-xxl">
 
   <section class="about" id="about">
-    <h1>A Propos de nous</h1>
-
     <div class="container-fluid">
 
-      <div class="row">
+      <div class="row text-center">
 
-        <div class="col">
-          <img src="assets/logo/logo.png" alt="logo">
-        </div>
-
-        <div class="col">
-          <p class="p-2 about__text text-center">
-            SN-MAVICO est une société de production industrielle de blocs bétons ou parpaings. Les briques produites sont
-            fortement vibrées et compressées pour une qualité qui défie toute concurrence.
-          </p>
+        <div class="col animated" ngsReveal="">
+          <img  class="img-fluid logo" src="assets/logo/logo.png" alt="logo" >
         </div>
 
       </div>
 
+        <div class="row">
+          <p class="p-2 about__text text-center" ngsReveal="">
+            SN-MAVICO est une société de production industrielle de blocs bétons ou parpaings.
+            Les briques produites sont
+            fortement vibrées et compressées pour une qualité qui défie toute concurrence.
+          </p>
+        </div>
     </div>
   </section>
 
   <section class="service" id="services">
 
-    <div class="container-fluid">
+    <div class="container-fluid service__solidity">
 
       <div class="row">
 
-        <div class="col logo">
-          <img class="img-fluid solidity--pic pic" src="" alt="solidity pic">
+        <div class="col logo" ngsReveal="">
+          <img class="img-fluid solidity--pic pic" src="assets/newBrique/DSC_0180-removebg-preview.png" alt="solidity pic">
         </div>
 
         <div class="col">
+
+          <h2 class="h2 text-center service__title">UNE SOLIDITE POUR LA VIE</h2>
           <p class="p-lg-5 text-center service__text">
             Constitués à 94% de gravier, de sable ainsi que de 6% d'eau, les blocs béton SN-MAVICO sont inaltérables
             incombustibles et inoxydables
@@ -47,18 +59,16 @@
   </section>
 
   <section class="service ">
-    <h1 class="h1 text-center">Service 2</h1>
-
-    <div class="container">
+    <div class="container-fluid service__spending">
 
       <div class="row">
 
-        <div class="col service__pic">
+        <div class="col service__pic" ngsReveal="">
           <img class="spending__pic img-fluid" src="assets/img/serv/pyramid_PNG16.png" alt="pic" >
         </div>
 
         <div class="col">
-          <p class="service__text p-lg-5 text-center">
+          <p class="service__text p-lg-5 text-center" ngsReveal="">
             L'utilisation des blocs de béton SN-MAVICO permet de réaliser des economies en bois de
             coffrage et d'étais et en mortier. De plus leur utilisation pratique permet de raccourcir vos délais
           </p>
@@ -71,18 +81,16 @@
   </section>
 
   <section class="service">
-    <h1>Service 3</h1>
-
-    <div class="container">
+    <div class="container-fluid service__iso">
 
       <div class="row">
 
-        <div class="col service__pic">
+        <div class="col service__pic"  ngsReveal="">
           <img class="spending__pic img-fluid" src="assets/img/serv/pyramid_PNG16.png" alt="pic" >
         </div>
 
         <div class="col">
-          <p class="service__text p-lg-5 text-center">
+          <p class="service__text p-lg-5 text-center" ngsReveal="">
             Le bloc de béton SN-MAVICO, par son systeme de double rangée d'alvéole, permet une isolation thermique et accoustique
             et efficace par l'interieur et par l'extérieur
           </p>
@@ -95,7 +103,31 @@
   </section>
 
   <section class="product" id="product">
-    <h1>Nos Produits</h1>
+
+    <div class="text-center">
+      <h3 class="h3 ">Nos Produits</h3>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/newBrique/DSC_0180-removebg-preview.png" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Bloc Creux</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/newBrique/DSC_0188-removebg-preview.png" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
   </section>
 
   <section class="contact" id="contact">

@@ -16,6 +16,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {AnimateOnScrollModule} from "ng2-animate-on-scroll";
 
 @NgModule({
   declarations: [
@@ -38,9 +39,8 @@ import {MatInputModule} from "@angular/material/input";
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    NgbModule
-
-
+    NgbModule,
+    AnimateOnScrollModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@300&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
-body{
-  height: 100%;
-  width: 100%;
+
+html,body{
+  scroll-behavior: smooth;
+}
+
+.container{
+  scroll-snap-type: y mandatory ;
+  overflow-y: -moz-scrollbars-none;
+  height: 100vh;
 }
 
 
@@ -14,46 +20,130 @@ section{
   scroll-snap-align: start;
 }
 
-
 section .h1{
   text-align: center;
 }
 
-.container{
-  scroll-snap-type: y mandatory ;
-  overflow-y: -moz-scrollbars-none;
-  height: 100vh;
-}
-
 .about{
   padding-top: 100px;
-  background-color: white;
+  background-color: #eaeaea;
+}
 
+.logo{
+  padding-top: 10px;
+  height: 400px;
+  width: 200px;
 }
 
 .about .about__text{
-  padding-top: 200px;
+  padding-top: 20px;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 2rem;
   line-height: 0.9;
   text-align: justify;
 }
 
-.about__text:hover{
-  transform: translateX(50%);
+.service__title{
+  font-size: 3rem;
+}
+
+.service__text{
+  border: solid;
+  font-size: 3rem;
+  line-height: 0.8;
+  color: #eaeaea;
 }
 
 .service{
-  background-color: white;
+
 }
 
 .service .container-fluid{
 
 }
 
+.service__solidity{
+  padding-top: 10%;
+  background-color: #eaeaea;
+}
+
+.service__solidity .service__text{
+  background-color: blue;
+}
+
+.service__spending{
+  padding-top: 10%;
+  background-color: #eaeaea;
+}
+
+.service__spending  .service__text{
+  background-color: dodgerblue;
+}
+
+.service__iso {
+  padding-top: 10%;
+  background-color: #eaeaea;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6,50px);
+  grid-auto-rows : 50px;
+  gap: 10px;
+}
+
+.subgrid{
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  grid-column: 1/4;
+  grid-row: 2/5;
+}
+
+.item{
+  background-color: red;
+}
+
+.subgrid > .item {
+  background-color: green;
+}
+
+@supports (grid-template-columns: subgrid) {
+  .subgrid .item{
+    background-color: #9ab7d3;
+  }
+}
+
+
+
+#myVideo {
+  position: inherit;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: blur();
+}
+
+.overlayText{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  z-index: 1;
+}
+
+/*.content {*/
+/*  bottom: 0;*/
+/*  background: rgba(0, 0, 0, 0.5);*/
+/*  color: #f1f1f1;*/
+/*  width: 100%;*/
+/*  padding: 20px;*/
+/*}*/
 
 
 .product{
+  padding-top: 10%;
   background-color: #eaeaea;
 }
 
@@ -70,7 +160,3 @@ section .h1{
   line-height: 0.2;
 }
 }
-
-
-
-
